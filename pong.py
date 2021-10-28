@@ -1,4 +1,5 @@
 import pygame, sys, random
+import pygame.midi
 
 def ball_animation():
 	global ball_speed_x, ball_speed_y
@@ -40,8 +41,11 @@ def ball_restart():
     ball_speed_y *= random.choice((1, -1))
     ball_speed_x *= random.choice((1, -1))
 # General setup
+
 pygame.init()
+pygame.midi.init()
 clock = pygame.time.Clock()
+
 
 # Main Window
 screen_width = 1280
